@@ -7,7 +7,13 @@ require('dotenv').config();
 
 const app = express();
 const port = process.eventNames.PORT || 5000
-app.use(cors());
+const corsOptions = {
+  origin: 'https://portfolio-frontend-w8em.onrender.com', // Replace with your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true, // Allow cookies to be sent if needed
+  optionsSuccessStatus: 200 // For older browsers
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use("/",router);
 app.listen(port,()=>console.log("server listening on oort 5000"));
