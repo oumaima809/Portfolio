@@ -23,8 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 # Ignore environment variables
-.env
+back/.env
 
 # Ignore node_modules folder
-node_modules/
+back/node_modules/
+front/node_modules/
 
