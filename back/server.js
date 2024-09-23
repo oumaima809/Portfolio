@@ -7,12 +7,7 @@ require('dotenv').config();
 
 const app = express();
 const port = process.eventNames.PORT || 5000
-const corsOptions = {
-  origin: 'https://portfolio-frontend-w8em.onrender.com', // Replace with your frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true, // Allow cookies to be sent if needed
-  optionsSuccessStatus: 200 // For older browsers
-};
+
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use("/",router);
