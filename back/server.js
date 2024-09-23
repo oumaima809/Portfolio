@@ -8,7 +8,7 @@ require('dotenv').config();
 const app = express();
 const port = process.eventNames.PORT || 5000
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use("/",router);
 app.listen(port,()=>console.log("server listening on oort 5000"));
