@@ -6,6 +6,7 @@ import hikeImg from '../assets/img/HikeProj.jpg' ;
 import bakeryImg from '../assets/img/bakeryWorld.jpeg';
 import cmdImg from '../assets/img/cmd.png';
 import oracleApex from '../assets/img/Oracle_apex.png';
+import congestion from '../assets/img/congestion.jpg'
 import Cards from './Cards';
 import { Circle } from 'react-bootstrap-icons';
 import { useState } from "react";
@@ -57,6 +58,13 @@ function Projects(){
             text : "This app streamlines equipment requests, maintenance, and allocation for Naxxum employees, automating the entire process.",
             tech : ["OracleApex", "PL/SQL"],
             github:""
+        },
+        {
+            img: congestion,
+            title: "Congestion Prediction Notebook",
+            text : "I created a notebook for developing an intelligent congestion prediction tool by analyzing traffic data and training models like Regression, Decision Trees, and RNNs.",
+            tech : ["Python","Numpy","Pandas","Seaborn","Tensorflow","Sklearn","Machine Learning"],
+            github:"https://github.com/oumaima809/Traffic-Congestion-Prediction/blob/main/Traffic%20Prediction.ipynb"
         }
     ]
 const [first, setFirst] = useState(false);
@@ -115,13 +123,20 @@ const UpdateIcon = (icon) => {
         </Col>
       );
     }
-    if (!second && index >= 3) {
+    if (!second && index >= 3 && index<6) {
       return (
         <Col sm={4} key={index}>
           <Cards cardInfo={cardInfo} />
         </Col>
       );
     }
+    if (!third && index >= 6) {
+        return (
+          <Col sm={4} key={index}>
+            <Cards cardInfo={cardInfo} />
+          </Col>
+        );
+      }
     return null; // Return null if neither condition matches
 })}
 
