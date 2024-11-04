@@ -1,12 +1,21 @@
+import React from 'react';
+import {useState} from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Modal from './Modal'
 import Badge from 'react-bootstrap/Badge'; // Import Bootstrap badge component
 
 
-function Cards({cardInfo}) {
 
 
-    return(
+function Cards({cardInfo , onReturnValue}) {
+   
+
+    const sendDataToParent = () => {
+        console.log("sent");
+        onReturnValue([true,cardInfo]); // Call the parent callback with data
+      };
+   return(
         
         
 
@@ -31,12 +40,14 @@ function Cards({cardInfo}) {
       {/* Add more technologies as needed */}
     </div>
     <span  className="custom-button">
-        <button 
-         
-    
-        >
-        Read More
-        </button>
+        
+            <button onClick={sendDataToParent}>
+               Read More
+            </button>
+            
+            
+        
+        
         
         {cardInfo.github && <button 
         
@@ -56,8 +67,9 @@ function Cards({cardInfo}) {
     </span>
     
   </Card.Body>
+
 </Card>
-                
+    
     )
 }
 export default Cards;

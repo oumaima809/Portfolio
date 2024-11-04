@@ -30,6 +30,7 @@ function Skill(){
       };
     return (
         <section className="skill" id="skills">
+            
             <Container >
              <Row >
                 <Col>

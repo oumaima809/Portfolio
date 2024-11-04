@@ -34,7 +34,7 @@ function NavBar() {
 
 
   return (
-    <Router>
+    
       <Navbar expand="lg" className={scrolled? "scrolled":""}>
       <Container>
         <Navbar.Brand href="#home" className="navbar-logo">
@@ -64,7 +64,7 @@ function NavBar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    </Router>
+    
     
   );
 }

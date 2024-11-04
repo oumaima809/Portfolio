@@ -10,7 +10,7 @@ import {BrowserRouter as Router} from "react-router-dom"
 
 function Banner (){
   return(
-    <Router>
+ 
 
    
     <section className="banner" id="home">
@@ -25,19 +25,19 @@ function Banner (){
 
                   </p>
                   <HashLink to='#connect' style={{ textDecoration: 'none' }}>
-                  <button >Let's connect <ArrowRightCircle size={25}/></button>
-
-            </HashLink>
+                    <button >Let's connect <ArrowRightCircle size={25}/></button>
+                  </HashLink>
            
                 </Col>
                 <Col xs={12} md={6} xl={5}>
                 <img src={headerImg} alt="Header img"></img>
                 </Col>
             </Row>
+            
         </Container>
 
     </section>
-    </Router>
+    
   )
 }
 
