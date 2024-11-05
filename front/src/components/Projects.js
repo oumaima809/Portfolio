@@ -11,7 +11,7 @@ import react from '../assets/img/reactlogo.png';
 import node from '../assets/img/node.png';
 import express from '../assets/img/express.png';
 import postgres from '../assets/img/postgresql.png';
-import demopcd from '../assets/vid/demo.mp4'
+import demopcd from '../assets/vid/demopcd.mp4'
 import Cards from './Cards';
 import Modal from './Modal';
 import { Circle } from 'react-bootstrap-icons';

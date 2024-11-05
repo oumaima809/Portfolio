@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import demo from '../assets/vid/demo.mp4';
+import demo from '../assets/vid/demopcd.mp4';
 import pcdImg from '../assets/img/pcd.png';
 import react from '../assets/img/reactlogo.png';
 import node from '../assets/img/node.png';
@@ -30,7 +30,7 @@ const Modal = ({close,projectInfo}) => {
                        <p>
                            {projectInfo.text}
                        </p>
-                       <video width="600" controls autoPlay muted loop poster={projectInfo.img}>
+                       <video width="600" height="300" controls autoPlay muted loop poster={projectInfo.img}>
                            <source src={projectInfo.demo} type="video/mp4" />
                            Your browser does not support the video tag.
                        </video>
