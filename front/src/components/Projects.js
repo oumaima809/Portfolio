@@ -11,7 +11,13 @@ import react from '../assets/img/reactlogo.png';
 import node from '../assets/img/node.png';
 import express from '../assets/img/express.png';
 import postgres from '../assets/img/postgresql.png';
-import demopcd from '../assets/vid/demopcd.mp4'
+import js from '../assets/img/js.png';
+import css from '../assets/img/css.svg';
+import html from '../assets/img/html.svg';
+import sqlite from '../assets/img/sqlite.png';
+import php from '../assets/img/php.png';
+import mysql from '../assets/img/mysql.png';
+import demopcd from '../assets/vid/demopcd.mp4';
 import Cards from './Cards';
 import Modal from './Modal';
 import { Circle } from 'react-bootstrap-icons';
@@ -24,6 +30,7 @@ function Projects(){
             img:pcdImg,
             title:"Digital platform for pathology labs",
             text:"A platform for laboratories to digitize, archive, and efficiently manage microscopic slides using specialized scanners, enhancing data storage and access.",
+            description:"A platform for laboratories to digitize, archive, and efficiently manage microscopic slides using specialized scanners, enhancing data storage and access.",
             tech : ["react", "Node.js","Express.js","Postgres"],
             tech_logo : [react,node,express,postgres],
             demo : demopcd,
@@ -31,10 +38,11 @@ function Projects(){
         },
         {
             img:hikeImg,
-            title:"HikeApp",
+            title:"Rando",
             text:"This project is a website that connects hikers with available trails and allows organizers to showcase their upcoming hikes, facilitating a community of outdoor enthusiasts.",
+            description:"This project is a website that connects hikers with available trails and allows organizers to showcase their upcoming hikes, facilitating a community of outdoor enthusiasts.",
             tech : ["HTML", "CSS","Javascript","Node.js", "Express.js", "Sqlite"],
-            tech_logo : [react,node,express,postgres],
+            tech_logo : [html,css,js,node,express,sqlite],
             demo :"",
             github :"https://github.com/oumaima809/HikeApp/tree/master"
 
@@ -43,8 +51,9 @@ function Projects(){
             img:bakeryImg,
             title:"Bakery World",
             text:"Bakery World is an e-commerce platform that allows users to explore a variety of baked goods, view detailed product information, add items to their cart, and complete secure checkout.",
+            description:"Bakery World is an e-commerce platform that allows users to explore a variety of baked goods, view detailed product information, add items to their cart, and complete secure checkout.",
             tech : ["HTML", "CSS","Javascript","Php","Mysql"],
-            tech_logo : [react,node,express,postgres],
+            tech_logo : [html,css,js,php,mysql],
             demo:"",
             github: "https://github.com/oumaima809/Bakery-World/tree/master"
 
@@ -53,6 +62,7 @@ function Projects(){
             img:cmdImg,
             title:"Travel Manager",
             text:"This CMD application is designed for travel managers to add and manage various trip details, while also allowing customers to search for specific trips.",
+            description:"",
             tech : ["C"],
             tech_logo : [react,node,express,postgres],
             demo:"",
@@ -62,6 +72,7 @@ function Projects(){
             img:oracleApex,
             title:"Emergency",
             text:"This emergency module, integrated within a healthcare information system, streamlines and automates the entire emergency response process, from the initial call to the final treatment.",
+            description:"",
             tech : ["OracleApex", "PL/SQL"],
             tech_logo : [react,node,express,postgres],
             demo:"",
@@ -72,6 +83,7 @@ function Projects(){
             img: oracleApex,
             title: "Naxxum Equipment Management",
             text : "This app streamlines equipment requests, maintenance, and allocation for Naxxum employees, automating the entire process.",
+            description:"",
             tech : ["OracleApex", "PL/SQL"],
             tech_logo : [react,node,express,postgres],
             demo:"",
@@ -81,6 +93,7 @@ function Projects(){
             img: congestion,
             title: "Congestion Prediction Notebook",
             text : "I created a notebook for developing an intelligent congestion prediction tool by analyzing traffic data and training models like Regression, Decision Trees, and RNNs.",
+            description:"",
             tech : ["Python","Numpy","Pandas","Seaborn","Tensorflow","Sklearn","Machine Learning"],
             tech_logo : [react,node,express,postgres],
             demo:"",
@@ -154,14 +167,14 @@ const UpdateIcon = (icon) => {
     if (!second && index >= 3 && index<6) {
       return (
         <Col sm={4} key={index}>
-          <Cards cardInfo={cardInfo} />
+          <Cards cardInfo={cardInfo} onReturnValue={openModal} />
         </Col>
       );
     }
     if (!third && index >= 6) {
         return (
           <Col sm={4} key={index}>
-            <Cards cardInfo={cardInfo} />
+            <Cards cardInfo={cardInfo} onReturnValue={openModal}/>
           </Col>
         );
       }

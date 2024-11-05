@@ -474,7 +474,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .icon{
   margin: 0 15px;           /* Adds space between icons */
-    font-size: 40px; 
+    font-size: 30px;
+    
     
 }
 /************ Projects Css ************/
@@ -735,7 +736,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  
+ 
 
   
 }

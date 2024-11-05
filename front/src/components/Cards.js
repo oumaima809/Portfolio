@@ -15,11 +15,16 @@ function Cards({cardInfo , onReturnValue}) {
         console.log("sent");
         onReturnValue([true,cardInfo]); // Call the parent callback with data
       };
+    const handleModal= ()=>{
+      if(cardInfo.description){
+        sendDataToParent();
+      }
+    }
    return(
         
         
 
-<Card  className="hover-card" style={{ height: '50rem', background: '#1E1E1E', color: '#FFFFFF' }}>
+<Card  className="hover-card" style={{ height: '50rem', background: '#1E1E1E', color: '#FFFFFF' ,cursor:'pointer'}} onClick={()=>handleModal()}>
   <Card.Img variant="top" src={cardInfo.img} style={{ height: '16rem' }} />
   <Card.Body>
     <Card.Title style={{color:'#FFF', fontWeight:'900'}}>{cardInfo.title}</Card.Title>
@@ -40,10 +45,10 @@ function Cards({cardInfo , onReturnValue}) {
       {/* Add more technologies as needed */}
     </div>
     <span  className="custom-button">
-        
+    {cardInfo.github &&
             <button onClick={sendDataToParent}>
                Read More
-            </button>
+            </button>}
             
             
         
