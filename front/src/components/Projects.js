@@ -18,6 +18,7 @@ import sqlite from '../assets/img/sqlite.png';
 import php from '../assets/img/php.png';
 import mysql from '../assets/img/mysql.png';
 import demopcd from '../assets/vid/demopcd.mp4';
+import demoBackery from '../assets/vid/demoBackery.mp4'
 import Cards from './Cards';
 import Modal from './Modal';
 import { Circle } from 'react-bootstrap-icons';
@@ -54,7 +55,7 @@ function Projects(){
             description:"Bakery World is an e-commerce platform that allows users to explore a variety of baked goods, view detailed product information, add items to their cart, and complete secure checkout.",
             tech : ["HTML", "CSS","Javascript","Php","Mysql"],
             tech_logo : [html,css,js,php,mysql],
-            demo:"",
+            demo:demoBackery,
             github: "https://github.com/oumaima809/Bakery-World/tree/master"
 
         },
